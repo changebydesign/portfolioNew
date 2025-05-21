@@ -1,0 +1,48 @@
+.root {
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  position: relative;
+  align-self: auto;
+  display: inline-flex;
+  width: auto;
+  height: 48px;
+  justify-self: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 1;
+  padding-bottom: 0px;
+}
+@media (min-width: 0px) and (max-width: 640px) {
+  .root {
+    height: auto;
+  }
+}
+.button {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: uppercase;
+  text-decoration-line: underline;
+  color: var(--token-plMbu2U0w);
+  align-self: center;
+  white-space: pre;
+  padding: 0px;
+  border-width: 0px;
+}
+@media (min-width: 0px) and (max-width: 640px) {
+  .button {
+    font-size: 15px;
+    line-height: 24pt;
+  }
+}
+.root:hover .button {
+  color: var(--token-VfyNdxy0s);
+}
+.root:active .button {
+  color: var(--token-fWxXX5ngg);
+}

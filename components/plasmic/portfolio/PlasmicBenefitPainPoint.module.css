@@ -1,0 +1,60 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 320px;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-start;
+  flex-grow: 1;
+  width: 320px;
+  border-radius: 8px;
+  padding: 48px;
+  border: 1px solid #ffffff3d;
+}
+.freeBox {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+  margin: 0px;
+}
+.slotTargetChildren {
+  color: var(--token-VfyNdxy0s);
+  font-weight: 300;
+}
+@media (min-width: 0px) and (max-width: 640px) {
+  .slotTargetChildren {
+    font-size: 17px;
+  }
+}
+.painPoint {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-VfyNdxy0s);
+  left: 24px;
+  top: 24px;
+  height: 1em;
+  flex-shrink: 0;
+}
+.painPointbenefit {
+  display: none;
+}
+.benefit2 {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-VfyNdxy0s);
+  left: 24px;
+  top: 24px;
+  height: 1em;
+  flex-shrink: 0;
+  display: none;
+}
+.benefit2benefit {
+  display: block;
+}
