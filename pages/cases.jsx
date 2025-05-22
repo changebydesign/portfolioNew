@@ -34,6 +34,11 @@ function Cases() {
       </PageParamsProvider__>
     </GlobalContextsProvider>
   );
+  
+  export async function getStaticProps() {
+  return {
+    props: {}
+  };
 }
 
 export default Cases;
