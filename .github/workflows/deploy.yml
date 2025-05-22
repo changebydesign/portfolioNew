@@ -1,12 +1,10 @@
 name: ACO Export Static Site to GitHub Pages
 
 on:
-  push:
-    branches:
-      - main  # Change if your default branch is different
+  workflow_dispatch:  # Run manually from GitHub Actions tab
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,12 +22,14 @@ jobs:
       - name: Build static site
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-          publish_branch: gh-pages
-          # Optional, but recommended:
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+      - name: Copy static output to export folder
+        run: |
+          rm -rf exported-static-site
+          mkdir exported-static-site
+          cp -r out/* exported-static-site/
+
+      - name: Commit exported site to main branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add exported-static-site
