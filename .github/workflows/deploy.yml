@@ -1,7 +1,9 @@
 name: ACO Export Static Site to GitHub Pages
 
 on:
-  workflow_dispatch:  # Run manually from GitHub Actions tab
+  push:
+    branches:
+      - main
 
 jobs:
   build:
