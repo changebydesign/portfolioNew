@@ -7,6 +7,7 @@ const nextConfig = {
   },
   trailingSlash: true,
   reactStrictMode: true,
+  assetPrefix: '',  // or just omit this line entirely
 };
 
 export default nextConfig;
